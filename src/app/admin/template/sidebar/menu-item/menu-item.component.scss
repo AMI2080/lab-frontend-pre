@@ -1,0 +1,79 @@
+.menu-item {
+  border-radius: 0 .5rem 0 .5rem;
+  margin-bottom: .5rem;
+
+  .menu-item-link {
+    background-color: #fff;
+    color: #FFB703;
+    display: block;
+    text-decoration: none;
+    padding: .5rem;
+    border-radius: 0 .5rem 0 .5rem;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #FB8500;
+      color: #fff;
+    }
+
+    .hasChilren {
+      position: absolute;
+      font-size: .75rem;
+      top: calc(50% - .75rem / 2);
+      left: .5rem;
+    }
+
+    &:has(.hasChilren) {
+      padding-inline-end: calc(1rem + .75rem);
+    }
+
+    .icon {
+      width: 1.285rem;
+    }
+
+    &.active {
+      border-inline-start: .25rem solid #fff;
+      background-color: #FB8500;
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+
+  .sub-menu {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  &.show {
+
+    &>.menu-item-link {
+      background-color: #FFB703;
+      color: #fff;
+    }
+
+    &>.sub-menu {
+      border-inline-start: .25rem solid #FFB703;
+      padding: .5rem;
+      padding-inline-end: 0;
+      padding-bottom: 0;
+      height: auto;
+
+      .menu-item-link {
+
+        &::before {
+          content: "";
+          width: .375rem;
+          height: .75rem;
+          border: .375rem solid transparent;
+          border-inline-end-width: 0;
+          border-inline-start-color: #FFB703;
+          position: absolute;
+          top: calc(50% - .375rem / 2);
+          right: -.5rem;
+        }
+      }
+    }
+  }
+}

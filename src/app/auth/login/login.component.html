@@ -1,0 +1,28 @@
+<div class="form-header">
+  <img src="assets/img/logo.png" class="logo" alt="logo">
+  <div class="lab-name">معمل الروضة</div>
+</div>
+<div class="text-danger mb-3" *ngIf="error">{{ error }}</div>
+<form [formGroup]="loginForm" formGroup="login" (ngSubmit)="onLogin()">
+  <div class="loading-container" *ngIf="submitting">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+  <label for="username" class="form-label">اسم المستخدم <span class="text-danger">*</span></label>
+  <div class="input-group mb-3">
+    <input type="text" id="username" class="form-control" #username name="username" formControlName="username" autofocus>
+  </div>
+  <label for="password" class="form-label">كلمة المرور <span class="text-danger">*</span></label>
+  <div class="input-group mb-3">
+    <input [type]="showPassword ? 'text' : 'password'" #password name="password" id="password" class="form-control" formControlName="password">
+    <span class="show-hide-password" (click)="showHidePassword(password)">
+      <i class="fa" [ngClass]="{'fa-eye-slash': showPassword, 'fa-eye': !showPassword}"></i>
+    </span>
+  </div>
+  <div class="form-check form-switch mb-3">
+    <input class="form-check-input" type="checkbox" role="switch" id="stay-on" formControlName="stayOn" #stayOn name="stayOn">
+    <label class="form-check-label" for="stay-on">البقاء متصلا</label>
+  </div>
+  <button type="submit" class="btn btn-basic btn-login mb-3" [disabled]="loginForm.invalid || submitting">دخول</button>
+  <hr>
+</form>
+<a routerLink="/auth/forget-password" >نسيت كلمة السر</a>

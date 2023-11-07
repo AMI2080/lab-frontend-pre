@@ -1,0 +1,93 @@
+@import '../../../vars.scss';
+
+.form-header {
+  padding-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    height: 3rem;
+  }
+
+  .lab-name {
+    padding-inline: .5rem;
+    font-weight: bold;
+    color: $basicColor;
+  }
+}
+
+.btn-login {
+  display: block;
+  width: 100%;
+}
+
+hr {
+  border-color: #D1DBE1;
+}
+
+.input-group:has(.show-hide-password) {
+  position: relative;
+
+  .form-control {
+    border-radius: var(--bs-border-radius) !important;
+    padding-inline-end: 2rem;
+
+    &.form-control+.show-hide-password {
+      top: .675rem;
+    }
+
+    &.form-control-sm+.show-hide-password {
+      top: .46875rem;
+    }
+
+    &.form-control-lg+.show-hide-password {
+      top: 1rem;
+    }
+  }
+
+  &.has-validation {
+
+    .form-control.is-valid,
+    .was-validated .form-control:valid,
+    .form-control.is-invalid,
+    .was-validated .form-control:invalid {
+      padding-inline-end: 4em;
+    }
+
+    .form-control.is-valid+.show-hide-password,
+    .was-validated .form-control:valid+.show-hide-password,
+    .form-control.is-invalid+.show-hide-password,
+    .was-validated .form-control:invalid+.show-hide-password {
+      left: 2.5rem;
+    }
+  }
+
+  .show-hide-password {
+    position: absolute;
+    cursor: pointer;
+    line-height: 1rem;
+    left: .5rem;
+    top: .675rem;
+    z-index: 6;
+  }
+
+}
+
+form {
+  position: relative;
+}
+
+.loading-container {
+  background-color: #fffd;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: calc(100% + 3rem);
+  transform: translateX(1.5rem);
+  height: 100%;
+}

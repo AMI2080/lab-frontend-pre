@@ -1,0 +1,47 @@
+.sidebar {
+  background-color: #02385A;
+  height: 100%;
+  padding: 1rem;
+  padding-inline-end: 0;
+
+  .logo-container {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    margin-bottom: 1rem;
+    margin-inline-end: 1rem;
+
+    img {
+      width: 3rem;
+    }
+
+    .name {
+      color: #fff;
+      font-size: 1.5rem;
+      padding-inline-start: .5rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .menu-container {
+    height: calc(100vh - 2rem - (2rem + 3rem + 1rem));
+
+    .menu {
+      padding-left: 1.5rem;
+    }
+
+    &.scrollbar {
+      --scrollbar-border-radius: .375rem;
+      --scrollbar-padding: .375rem;
+      --scrollbar-viewport-margin: 0;
+      --scrollbar-track-color: transparent;
+      --scrollbar-wrapper-color: transparent;
+      --scrollbar-thumb-color: #FFB703cc;
+      --scrollbar-thumb-hover-color: #FFB703;
+      --scrollbar-size: .25rem;
+      --scrollbar-hover-size: var(--scrollbar-size);
+      --scrollbar-thumb-transition: height ease-out 150ms, width ease-out 150ms;
+      --scrollbar-track-transition: height ease-out 150ms, width ease-out 150ms;
+    }
+  }
+}

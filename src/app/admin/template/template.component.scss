@@ -1,0 +1,11 @@
+.template-container{
+  margin: 1rem;
+  height: calc(100vh - 2rem);
+  width: calc(100vw - 2rem);
+  background-color: #fff;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 0 0.375rem #ddd;
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+}
