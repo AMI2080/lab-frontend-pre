@@ -1,0 +1,25 @@
+.content-container{
+  height: 100%;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  
+  .content{
+    height: 100%;
+    padding: 1rem;
+    padding-left: 1.5rem;
+  }
+  
+  .scrollbar {
+    --scrollbar-border-radius: .375rem;
+    --scrollbar-padding: .375rem;
+    --scrollbar-viewport-margin: 0;
+    --scrollbar-track-color: transparent;
+    --scrollbar-wrapper-color: transparent;
+    --scrollbar-thumb-color: #02304755;
+    --scrollbar-thumb-hover-color: #023047aa;
+    --scrollbar-size: .25rem;
+    --scrollbar-hover-size: var(--scrollbar-size);
+    --scrollbar-thumb-transition: height ease-out 150ms, width ease-out 150ms;
+    --scrollbar-track-transition: height ease-out 150ms, width ease-out 150ms;
+  }
+}

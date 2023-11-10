@@ -1,0 +1,239 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card text-bg-light h-100 border-warning">
+      <div class="card-header bg-warning border-warning">
+        <i class="fa fa-calendar-days"></i>
+        تصفية بالتاريخ
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-3">
+            <input type="radio" name="period" class="btn-check" id="btn-check" checked>
+            <label class="btn btn-warning btn-period w-100 h-100" for="btn-check">اليوم</label>
+          </div>
+          <div class="col-3">
+            <input type="radio" name="period" class="btn-check" id="btn-check-2">
+            <label class="btn btn-warning btn-period w-100 h-100" for="btn-check-2">أمس</label>
+          </div>
+          <div class="col-3">
+            <input type="radio" name="period" class="btn-check" id="btn-check-3">
+            <label class="btn btn-warning btn-period w-100 h-100" for="btn-check-3">الأسبوع الحالى</label>
+          </div>
+          <div class="col-3">
+            <input type="radio" name="period" class="btn-check" id="btn-check-4">
+            <label class="btn btn-warning btn-period w-100 h-100" for="btn-check-4">الشهر</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div class="col-6">
+    <div class="row row-gap-3">
+      <div class="col-6">
+        <div class="card text-bg-info h-100">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="fa fa-sack-dollar"></i>
+              النقدية
+            </h5>
+            <p class="card-text">
+              {{ 26745 | number }}
+              جنيه
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card text-bg-warning h-100">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="fa fa-file-invoice-dollar"></i>
+              الفواتير
+            </h5>
+            <p class="card-text">
+              {{ 151 | number }}
+              فاتورة
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card text-bg-secondary h-100">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="fa fa-print"></i>
+              النتائج المطبوعة
+            </h5>
+            <p class="card-text">
+              {{ 78 | number }}
+              نتيجة
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card text-bg-primary h-100">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="fa fa-bed-pulse"></i>
+              مرضى جدد
+            </h5>
+            <p class="card-text">
+              {{ 37 | number }}
+              مريض
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card border-success">
+          <div class="card-header bg-success border-success text-white">
+            <i class="fa fa-sitemap"></i>
+            إيراد الفروع
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">
+            </h5>
+            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [labels]="chartOptions.labels" [responsive]="chartOptions.responsive"></apx-chart>
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">
+                    مصر الجديدة
+                    <button type="button" class="btn btn-outline-success btn-sm ms-2">
+                      <i class="fa fa-eye"></i>
+                      عرض بيانات الفرع
+                    </button>
+                  </div>
+                </div>
+                <span class="badge bg-success rounded-pill">
+                  {{ 7655 | number }} جنيه
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">
+                    المعادى
+                    <button type="button" class="btn btn-outline-success btn-sm ms-2">
+                      <i class="fa fa-eye"></i>
+                      عرض بيانات الفرع
+                    </button>
+                  </div>
+                </div>
+                <span class="badge bg-success rounded-pill">
+                  {{ 13950 | number }} جنيه
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">
+                    طلعت حرب
+                    <button type="button" class="btn btn-outline-success btn-sm ms-2">
+                      <i class="fa fa-eye"></i>
+                      عرض بيانات الفرع
+                    </button>
+                  </div>
+                </div>
+                <span class="badge bg-success rounded-pill">
+                  {{ 6890 | number }} جنيه
+                </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">
+                    مدينة نصر
+                    <button type="button" class="btn btn-outline-success btn-sm ms-2">
+                      <i class="fa fa-eye"></i>
+                      عرض بيانات الفرع
+                    </button>
+                  </div>
+                </div>
+                <span class="badge bg-success rounded-pill">
+                  {{ 8125 | number }} جنيه
+                </span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="row row-gap-3">
+      <div class="col-6">
+        <div class="card text-bg-success h-100">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="fa fa-syringe"></i>
+              العينات المسحوبة
+            </h5>
+            <p class="card-text">
+              {{ 133 | number }}
+              عينة
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card text-bg-danger h-100">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="fa fa-syringe"></i>
+              العينات المطلوبة
+            </h5>
+            <p class="card-text">
+              {{ 18 | number }}
+              عينة
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="fa fa-syringe"></i>
+              العينات المطلوبة
+              <span class="bg-dark text-white rounded-circle d-inline-block float-end samples-required-count">18</span>
+            </h3>
+          </div>
+          <div class="card-body">
+            <table class="table table-responsive-sm table-sm text-nowrap text-center">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>المريض</th>
+                  <th>نوع العينة</th>
+                  <th>التحليل</th>
+                  <th>عمليات</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  *ngFor="let x of [1374,1375,1376,1377,1378,1379,1380,1381,1382,1383,1384,1385,1386,1387,1388,1389,1390,1391]">
+                  <td>{{ x }}</td>
+                  <td>أحمد عبدالله</td>
+                  <td>دم</td>
+                  <td>صورة دم</td>
+                  <td>
+                    <button type="button" class="btn btn-success btn-sm me-3">
+                      <i class="fa fa-syringe"></i>
+                      سحب
+                    </button>
+                    <button type="button" class="btn btn-primary btn-sm">
+                      <i class="fa fa-eye"></i>
+                      الفاتورة
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

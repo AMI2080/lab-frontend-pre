@@ -1,0 +1,13 @@
+.samples-required-count {
+  padding: .2rem;
+}
+
+.btn-period {
+  background-color: #fb850055;
+}
+
+.btn-check:checked+.btn-period {
+  background-color: #fb8500;
+  color: #fff;
+  font-weight: bold;
+}

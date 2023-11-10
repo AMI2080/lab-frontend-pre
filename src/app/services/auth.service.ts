@@ -36,7 +36,7 @@ export class AuthService {
       setTimeout(() => {
         if (username.toLowerCase() === 'admin' &&
           password === '123') {
-          resolve(new User(username, 'Abdelrhman', 'Mohamed', stayOn));
+          resolve(new User(username, 'عبدالرحمن', 'محمد', stayOn));
         } else {
           reject('البيانات غير صحيحة')
         }
