@@ -60,6 +60,86 @@
           </div>
         </div>
       </div>
+      <div class="col-12">
+        <div class="card border-success">
+          <div class="card-header bg-success border-success text-white">
+            <i class="fa fa-sitemap"></i>
+            إيراد الفروع
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">
+            </h5>
+            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [labels]="chartOptions.labels"
+              [responsive]="chartOptions.responsive"></apx-chart>
+            <ol class="list-group list-group-numbered">
+              <li
+                class="list-group-item list-group-item-action list-group-item-success d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">
+                    مصر الجديدة
+                    <button type="button" class="btn btn-outline-success btn-sm ms-2">
+                      <i class="fa fa-eye"></i>
+                      عرض بيانات الفرع
+                    </button>
+                  </div>
+                </div>
+                <span class="badge bg-success rounded-pill">
+                  {{ 7655 | number }} جنيه
+                </span>
+              </li>
+              <li
+                class="list-group-item list-group-item-action list-group-item-success d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">
+                    المعادى
+                    <button type="button" class="btn btn-outline-success btn-sm ms-2">
+                      <i class="fa fa-eye"></i>
+                      عرض بيانات الفرع
+                    </button>
+                  </div>
+                </div>
+                <span class="badge bg-success rounded-pill">
+                  {{ 13950 | number }} جنيه
+                </span>
+              </li>
+              <li
+                class="list-group-item list-group-item-action list-group-item-success d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">
+                    طلعت حرب
+                    <button type="button" class="btn btn-outline-success btn-sm ms-2">
+                      <i class="fa fa-eye"></i>
+                      عرض بيانات الفرع
+                    </button>
+                  </div>
+                </div>
+                <span class="badge bg-success rounded-pill">
+                  {{ 6890 | number }} جنيه
+                </span>
+              </li>
+              <li
+                class="list-group-item list-group-item-action list-group-item-success d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">
+                    مدينة نصر
+                    <button type="button" class="btn btn-outline-success btn-sm ms-2">
+                      <i class="fa fa-eye"></i>
+                      عرض بيانات الفرع
+                    </button>
+                  </div>
+                </div>
+                <span class="badge bg-success rounded-pill">
+                  {{ 8125 | number }} جنيه
+                </span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="row row-gap-3">
       <div class="col-6">
         <div class="card text-bg-secondary h-100">
           <div class="card-body">
@@ -88,81 +168,6 @@
           </div>
         </div>
       </div>
-      <div class="col-12">
-        <div class="card border-success">
-          <div class="card-header bg-success border-success text-white">
-            <i class="fa fa-sitemap"></i>
-            إيراد الفروع
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">
-            </h5>
-            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [labels]="chartOptions.labels" [responsive]="chartOptions.responsive"></apx-chart>
-            <ol class="list-group list-group-numbered">
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">
-                    مصر الجديدة
-                    <button type="button" class="btn btn-outline-success btn-sm ms-2">
-                      <i class="fa fa-eye"></i>
-                      عرض بيانات الفرع
-                    </button>
-                  </div>
-                </div>
-                <span class="badge bg-success rounded-pill">
-                  {{ 7655 | number }} جنيه
-                </span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">
-                    المعادى
-                    <button type="button" class="btn btn-outline-success btn-sm ms-2">
-                      <i class="fa fa-eye"></i>
-                      عرض بيانات الفرع
-                    </button>
-                  </div>
-                </div>
-                <span class="badge bg-success rounded-pill">
-                  {{ 13950 | number }} جنيه
-                </span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">
-                    طلعت حرب
-                    <button type="button" class="btn btn-outline-success btn-sm ms-2">
-                      <i class="fa fa-eye"></i>
-                      عرض بيانات الفرع
-                    </button>
-                  </div>
-                </div>
-                <span class="badge bg-success rounded-pill">
-                  {{ 6890 | number }} جنيه
-                </span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">
-                    مدينة نصر
-                    <button type="button" class="btn btn-outline-success btn-sm ms-2">
-                      <i class="fa fa-eye"></i>
-                      عرض بيانات الفرع
-                    </button>
-                  </div>
-                </div>
-                <span class="badge bg-success rounded-pill">
-                  {{ 8125 | number }} جنيه
-                </span>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-6">
-    <div class="row row-gap-3">
       <div class="col-6">
         <div class="card text-bg-success h-100">
           <div class="card-body">
@@ -201,36 +206,38 @@
             </h3>
           </div>
           <div class="card-body">
-            <table class="table table-responsive-sm table-sm text-nowrap text-center">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>المريض</th>
-                  <th>نوع العينة</th>
-                  <th>التحليل</th>
-                  <th>عمليات</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr
-                  *ngFor="let x of [1374,1375,1376,1377,1378,1379,1380,1381,1382,1383,1384,1385,1386,1387,1388,1389,1390,1391]">
-                  <td>{{ x }}</td>
-                  <td>أحمد عبدالله</td>
-                  <td>دم</td>
-                  <td>صورة دم</td>
-                  <td>
-                    <button type="button" class="btn btn-success btn-sm me-3">
-                      <i class="fa fa-syringe"></i>
-                      سحب
-                    </button>
-                    <button type="button" class="btn btn-primary btn-sm">
-                      <i class="fa fa-eye"></i>
-                      الفاتورة
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <ng-scrollbar class="required-sample-table-scrollbar">
+              <table class="table table-responsive-sm table-hover table-sm text-nowrap text-center required-sample-table">
+                <thead>
+                  <tr>
+                    <th class="bg-secondary text-white">#</th>
+                    <th class="bg-secondary text-white">المريض</th>
+                    <th class="bg-secondary text-white">نوع العينة</th>
+                    <th class="bg-secondary text-white">التحليل</th>
+                    <th class="bg-secondary text-white">عمليات</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    *ngFor="let x of [1374,1375,1376,1377,1378,1379,1380,1381,1382,1383,1384,1385,1386,1387,1388,1389,1390,1391]">
+                    <td>{{ x }}</td>
+                    <td>أحمد عبدالله</td>
+                    <td>دم</td>
+                    <td>صورة دم</td>
+                    <td>
+                      <button type="button" class="btn btn-success btn-sm me-3">
+                        <i class="fa fa-syringe"></i>
+                        سحب
+                      </button>
+                      <button type="button" class="btn btn-primary btn-sm">
+                        <i class="fa fa-eye"></i>
+                        الفاتورة
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </ng-scrollbar>
           </div>
         </div>
       </div>

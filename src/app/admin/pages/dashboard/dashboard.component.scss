@@ -11,3 +11,25 @@
   color: #fff;
   font-weight: bold;
 }
+
+.required-sample-table {
+  thead {
+    position: sticky;
+    top: 0;
+  }
+}
+
+.required-sample-table-scrollbar {
+  height: 28.87rem;
+  --scrollbar-border-radius: .375rem;
+  --scrollbar-padding: .375rem;
+  --scrollbar-viewport-margin: 0;
+  --scrollbar-track-color: transparent;
+  --scrollbar-wrapper-color: transparent;
+  --scrollbar-thumb-color: #02304755;
+  --scrollbar-thumb-hover-color: #023047aa;
+  --scrollbar-size: .25rem;
+  --scrollbar-hover-size: var(--scrollbar-size);
+  --scrollbar-thumb-transition: height ease-out 150ms, width ease-out 150ms;
+  --scrollbar-track-transition: height ease-out 150ms, width ease-out 150ms;
+}
