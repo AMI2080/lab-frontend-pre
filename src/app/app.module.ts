@@ -12,6 +12,8 @@ import { TemplateComponent } from './admin/template/template.component';
 import { SidebarComponent } from './admin/template/sidebar/sidebar.component';
 import { MenuItemComponent } from './admin/template/sidebar/menu-item/menu-item.component';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
+import { MainComponent } from './admin/template/main/main.component';
+import { HeaderComponent } from './admin/template/main/header/header.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinne
     SidebarComponent,
     MenuItemComponent,
     LoadingSpinnerComponent,
+    MainComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

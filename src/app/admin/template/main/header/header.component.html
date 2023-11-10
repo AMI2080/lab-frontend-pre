@@ -1,0 +1,32 @@
+<div class="app-header">
+  <div class="items-end">
+    <div class="user">
+      <div class="user-actions-container">
+        <button type="button" class="user-actions-toggle" [ngClass]="{open: userActionsIsOpen}" (click)="userActionsIsOpen = !userActionsIsOpen">
+          <i class="fa fa-ellipsis-vertical"></i>
+        </button>
+        <div class="user-actions" #userAction>
+          <div class="user-action">
+            <i class="fa fa-sliders"></i>
+            الإعدادات
+          </div>
+          <div class="user-action text-danger" (click)="onLogout()">
+            <i class="fa fa-right-from-bracket"></i>
+            تسجيل خروج
+          </div>
+        </div>
+      </div>
+      <div class="user-img">
+        <img src="assets/img/user.jpg" alt="">
+      </div>
+      <div class="user-info">
+        <div class="user-name">{{ user.name }}</div>
+        <div class="user-title">@{{ user.username }}</div>
+      </div>
+    </div>
+    <button type="button" class="notification-toggle text-danger">
+      <i class="far fa-bell"></i>
+      <span class="notification-count" *ngIf="hasNotifications">{{ notificationCount }}</span>
+    </button>
+  </div>
+</div>
