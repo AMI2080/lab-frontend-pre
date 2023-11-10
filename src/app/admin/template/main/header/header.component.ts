@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { AuthService, User } from 'src/app/services/auth.service';
 import Swal from 'sweetalert2';
 
@@ -8,21 +8,25 @@ import Swal from 'sweetalert2';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  @ViewChild('userAction') userAction: ElementRef;
-
   user: User = this.authService.user;
 
   userActionsIsOpen: boolean = false;
+
+  notificatinsIsOpen: boolean = false;
 
   private _notificationCount: number = 15;
 
   @HostListener('window:keyup.Escape') onEscKeyUp() {
     this.userActionsIsOpen = false;
+    this.notificatinsIsOpen = false;
   }
 
   @HostListener('window:click', ['$event.target']) onClick(clickedElement: HTMLElement) {
     if (!clickedElement.closest('.user-actions') && !clickedElement.closest('.user-actions-toggle')) {
       this.userActionsIsOpen = false
+    }
+    if (!clickedElement.closest('.notifications') && !clickedElement.closest('.notifications-toggle')) {
+      this.notificatinsIsOpen = false
     }
   }
 
@@ -40,15 +44,14 @@ export class HeaderComponent {
   }
 
   onLogout() {
-    const swalWithBootstrapButtons = Swal.mixin({
+    const logoutAlert = Swal.mixin({
       customClass: {
         confirmButton: "btn btn-danger mx-1",
         cancelButton: "btn btn-secondary mx-1"
       },
       buttonsStyling: false
     });
-
-    swalWithBootstrapButtons.fire({
+    logoutAlert.fire({
       title: "سيتم تسجيل الخروج",
       text: "هل تريد المتابعة؟",
       icon: "question",

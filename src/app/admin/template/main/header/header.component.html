@@ -5,7 +5,7 @@
         <button type="button" class="user-actions-toggle" [ngClass]="{open: userActionsIsOpen}" (click)="userActionsIsOpen = !userActionsIsOpen">
           <i class="fa fa-ellipsis-vertical"></i>
         </button>
-        <div class="user-actions" #userAction>
+        <div class="user-actions" *ngIf="userActionsIsOpen">
           <div class="user-action">
             <i class="fa fa-sliders"></i>
             الإعدادات
@@ -24,9 +24,73 @@
         <div class="user-title">@{{ user.username }}</div>
       </div>
     </div>
-    <button type="button" class="notification-toggle text-danger">
-      <i class="far fa-bell"></i>
-      <span class="notification-count" *ngIf="hasNotifications">{{ notificationCount }}</span>
-    </button>
+    <div class="notifications-container">
+      <button type="button" class="notifications-toggle text-danger" [ngClass]="{open: notificatinsIsOpen}" (click)="notificatinsIsOpen = !notificatinsIsOpen">
+        <i class="far fa-bell"></i>
+        <span class="notification-count" *ngIf="hasNotifications">{{ notificationCount }}</span>
+      </button>
+      <div class="notifications" *ngIf="notificatinsIsOpen">
+      <ng-scrollbar class="notifications-scrollbar">
+          <div class="notification unread">
+            <i class="fa fa-envelope"></i>
+            تنبيه
+            <span class="notification-time">منذ 15 دقيقة</span>
+          </div>
+          <div class="notification">
+            <i class="fa fa-envelope-open"></i>
+            تنبيه
+            <span class="notification-time">منذ 37 دقيقة</span>
+          </div>
+          <div class="notification unread">
+            <i class="fa fa-envelope"></i>
+            تنبيه
+            <span class="notification-time">منذ 4 ساعات</span>
+          </div>
+          <div class="notification">
+            <i class="fa fa-envelope-open"></i>
+            تنبيه
+            <span class="notification-time">منذ 6 ساعات</span>
+          </div>
+          <div class="notification unread">
+            <i class="fa fa-envelope"></i>
+            تنبيه
+            <span class="notification-time">منذ 9 ساعات</span>
+          </div>
+          <div class="notification unread">
+            <i class="fa fa-envelope"></i>
+            تنبيه
+            <span class="notification-time">منذ يوم</span>
+          </div>
+          <div class="notification">
+            <i class="fa fa-envelope-open"></i>
+            تنبيه
+            <span class="notification-time">منذ يوم</span>
+          </div>
+          <div class="notification unread">
+            <i class="fa fa-envelope"></i>
+            تنبيه
+            <span class="notification-time">منذ يومين</span>
+          </div>
+          <div class="notification">
+            <i class="fa fa-envelope-open"></i>
+            تنبيه
+            <span class="notification-time">منذ يومين</span>
+          </div>
+          <div class="notification unread">
+            <i class="fa fa-envelope"></i>
+            تنبيه
+            <span class="notification-time">منذ 3 أيام</span>
+          </div>
+          <div class="notification">
+            <i class="fa fa-envelope-open"></i>
+            تنبيه
+            <span class="notification-time">منذ أسبوع</span>
+          </div>
+        </ng-scrollbar>
+        <div class="notifications-footer">
+          عرض كل التنبيهات
+        </div>
+      </div>
+    </div>
   </div>
 </div>
