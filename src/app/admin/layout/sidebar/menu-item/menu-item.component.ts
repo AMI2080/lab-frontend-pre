@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 export class LinkItem {
   show: boolean = false;
@@ -14,7 +14,8 @@ export class LinkItem {
 @Component({
   selector: 'app-menu-item',
   templateUrl: './menu-item.component.html',
-  styleUrls: ['./menu-item.component.scss']
+  styleUrls: ['./menu-item.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class MenuItemComponent {
   @Input() links: LinkItem[];

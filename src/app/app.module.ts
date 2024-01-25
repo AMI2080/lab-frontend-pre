@@ -8,14 +8,14 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { LoginComponent } from './auth/login/login.component';
 import { AdminComponent } from './admin/admin.component';
-import { TemplateComponent } from './admin/template/template.component';
-import { SidebarComponent } from './admin/template/sidebar/sidebar.component';
-import { MenuItemComponent } from './admin/template/sidebar/menu-item/menu-item.component';
+import { LayoutComponent } from './admin/layout/layout.component';
+import { SidebarComponent } from './admin/layout/sidebar/sidebar.component';
+import { MenuItemComponent } from './admin/layout/sidebar/menu-item/menu-item.component';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
-import { MainComponent } from './admin/template/main/main.component';
-import { HeaderComponent } from './admin/template/main/header/header.component';
-import { FooterComponent } from './admin/template/main/footer/footer.component';
-import { ContentComponent } from './admin/template/main/content/content.component';
+import { MainComponent } from './admin/layout/main/main.component';
+import { HeaderComponent } from './admin/layout/main/header/header.component';
+import { FooterComponent } from './admin/layout/main/footer/footer.component';
+import { ContentComponent } from './admin/layout/main/content/content.component';
 import { DashboardComponent } from './admin/pages/dashboard/dashboard.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -25,7 +25,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     AuthComponent,
     LoginComponent,
     AdminComponent,
-    TemplateComponent,
+    LayoutComponent,
     SidebarComponent,
     MenuItemComponent,
     LoadingSpinnerComponent,

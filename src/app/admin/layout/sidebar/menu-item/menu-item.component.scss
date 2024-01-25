@@ -77,3 +77,9 @@
     }
   }
 }
+
+.sidebar.sidebar-minimized .menu>.app-menu-item>.menu-item {
+  &>.menu-item-link {
+    color: red;
+  }
+}

@@ -3,13 +3,17 @@
   <a class="menu-item-link"  [routerLink]="menu.href" routerLinkActive="active" [routerLinkActiveOptions]="{exacts: true}" *ngIf="!menu.children">
     <i class="{{ menu.icon.icon }} fa-fw icon" *ngIf="menu?.icon?.type === 'fa'"></i>
     <img [src]="menu.icon.icon" class="icon" *ngIf="menu?.icon?.type === 'img'">
-    {{ menu.name }}
+    <span class="link-text">
+      {{ menu.name }}
+    </span>
   </a>
 
   <div class="menu-item-link" (click)="menu.show = !menu.show" *ngIf="menu.children">
     <i class="{{ menu.icon.icon }} fa-fw icon" *ngIf="menu?.icon?.type === 'fa'"></i>
     <img [src]="menu.icon.icon" class="icon" *ngIf="menu?.icon?.type === 'img'">
-    {{ menu.name }}
+    <span class="link-text">
+      {{ menu.name }}
+    </span>
     <i class="fa fa-chevron-left fa-fw hasChilren" [ngClass]="{'fa-rotate-270': menu.show}"></i>
   </div>
   <div class="sub-menu" *ngIf="menu.children">

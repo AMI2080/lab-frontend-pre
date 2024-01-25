@@ -44,4 +44,27 @@
       --scrollbar-track-transition: height ease-out 150ms, width ease-out 150ms;
     }
   }
+
+  &.sidebar-minimized:not(:hover) {
+    .logo-container {
+      display: block;
+
+      .name {
+        display: none;
+      }
+    }
+
+    .menu>.app-menu-item>.menu-item {
+      .menu-item-link{
+        // text-align: center;
+      }
+      &>*:not(.menu-item-link) {
+        display: none;
+      }
+
+      &>.menu-item-link>*:not(.icon) {
+        display: none;
+      }
+    }
+  }
 }
